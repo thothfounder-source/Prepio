@@ -5,7 +5,7 @@ const stripe = Stripe('pk_test_51TnOg4PhyVChUrUDvzFBC3Kx52Z4Y12WB1oQWHj0ii5CqwEs
 const CONFIG = {
     stripePublicKey: 'pk_test_51TnOg4PhyVChUrUDvzFBC3Kx52Z4Y12WB1oQWHj0ii5CqwEslm1jXIHoVyromPyMq2rkRkuD7QogxnL7IXaGN59D00sTGlKjK2', // Will be replaced by environment variable
     productPrice: 2900, // $29.00 in cents
-    productName: 'Prepio - Early Bird Pre-Order',
+    productName: 'Prepio - Lifetime Access',
     successUrl: window.location.origin + '/success.html',
     cancelUrl: window.location.origin + '/index.html'
 };
