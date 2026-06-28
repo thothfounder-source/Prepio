@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepio.io - Ace Your Next Interview</title>
+    <meta name="description" content="AI-powered interview practice that gets you hired. Personalized coaching, real voice interaction, and performance analytics. Join 500+ professionals preparing for success.">
+    <meta property="og:title" content="Prepio.io - Ace Your Next Interview">
+    <meta property="og:description" content="AI-powered interview practice that gets you hired. 50% off early bird special - only $29!">
+    <meta property="og:url" content="https://prepio.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <!-- Stripe Configuration (replace pk_test_placeholder with your actual key) -->
+    <meta name="stripe-key" content="pk_test_placeholder">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">Prepio.io</span>
+            </div>
+            <nav class="nav">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <button id="nav-cta" class="cta-button-small">Pre-Order Now</button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Ace Your Next Interview with 
+                        <span class="gradient-text">AI-Powered Practice</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Get personalized coaching, practice with realistic scenarios, and build confidence 
+                        that gets you hired. Join 500+ professionals already preparing for success.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <button id="hero-cta" class="cta-button-large">
+                            <span class="cta-text">Pre-Order Now - Save 50%</span>
+                            <span class="cta-price">$29 <span class="original-price">$59</span></span>
+                        </button>
+                        <div class="cta-details">
+                            <span class="launch-info">🚀 Launches in 30 days</span>
+                            <span class="guarantee">💯 30-day money-back guarantee</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="app-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="app-interface">
+                                    <div class="app-header">
+                                        <div class="status-bar"></div>
+                                        <h3>Interview Practice</h3>
+                                    </div>
+                                    <div class="practice-card">
+                                        <div class="ai-avatar">🤖</div>
+                                        <div class="message-bubble">
+                                            "Tell me about a time when you had to work with a difficult team member..."
+                                        </div>
+                                    </div>
+                                    <div class="controls">
+                                        <div class="record-btn">🎙️</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Banner -->
+        <section class="social-proof-banner">
+            <div class="proof-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">92%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.8⭐</span>
+                    <span class="stat-label">User Rating</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">Everything You Need to Succeed</h2>
+                <p class="section-subtitle">
+                    AI-powered interview coaching tailored to your specific role and experience level
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Personalized Practice</h3>
+                    <p class="feature-description">
+                        AI adapts questions to your target role, experience level, and identified weak points. 
+                        Get relevant practice that matches real interview scenarios.
+                    </p>
+                    <div class="feature-highlight">
+                        <span class="highlight-tag">Smart Adaptation</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <h3 class="feature-title">Real Voice Interaction</h3>
+                    <p class="feature-description">
+                        Practice speaking out loud with natural voice conversations. 
+                        Get instant feedback on your delivery, pace, and confidence level.
+                    </p>
+                    <div class="feature-highlight">
+                        <span class="highlight-tag">Voice Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Performance Analytics</h3>
+                    <p class="feature-description">
+                        Track your improvement over time with detailed analytics. 
+                        Identify patterns, strengths, and areas for focused practice.
+                    </p>
+                    <div class="feature-highlight">
+                        <span class="highlight-tag">Progress Tracking</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3 class="feature-title">Multiple Interview Types</h3>
+                    <p class="feature-description">
+                        Practice behavioral, technical, case study, and role-specific interviews. 
+                        Comprehensive preparation for any interview format.
+                    </p>
+                    <div class="feature-highlight">
+                        <span class="highlight-tag">Complete Coverage</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">AI-Powered Insights</h3>
+                    <p class="feature-description">
+                        Advanced AI analyzes your responses and provides actionable feedback. 
+                        Learn what interviewers are really looking for.
+                    </p>
+                    <div class="feature-highlight">
+                        <span class="highlight-tag">Smart Feedback</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile First Design</h3>
+                    <p class="feature-description">
+                        Practice anywhere, anytime with our native mobile app. 
+                        Seamless experience across all your devices.
+                    </p>
+                    <div class="feature-highlight">
+                        <span class="highlight-tag">Cross Platform</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="section-header">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">Real results from real users</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "InterviewReady AI helped me land my dream job at Google. The personalized 
+                            feedback was incredible - it's like having a professional coach in your pocket."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍💼</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Chen</span>
+                            <span class="author-role">Software Engineer at Google</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "The voice practice feature was a game-changer. I went from stumbling over 
+                            answers to confidently articulating my thoughts. Increased my offer rate by 300%!"
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💻</div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus Johnson</span>
+                            <span class="author-role">Product Manager at Microsoft</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "As a career changer, I was nervous about interviews. InterviewReady gave me 
+                            the confidence and skills I needed. Worth every penny!"
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍🔬</div>
+                        <div class="author-info">
+                            <span class="author-name">Emily Rodriguez</span>
+                            <span class="author-role">Data Scientist at Netflix</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="section-header">
+                <h2 class="section-title">Early Bird Special</h2>
+                <p class="section-subtitle">
+                    Limited time offer for the first 100 customers
+                </p>
+            </div>
+            
+            <div class="pricing-container">
+                <div class="price-card featured">
+                    <div class="price-badge">🔥 Early Bird - 50% Off</div>
+                    
+                    <div class="price-header">
+                        <div class="price-amount">
+                            <span class="current-price">$29</span>
+                            <span class="original-price">$59</span>
+                        </div>
+                        <div class="price-period">One-time payment</div>
+                        <div class="price-description">Lifetime access to InterviewReady AI</div>
+                    </div>
+                    
+                    <div class="price-features">
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Unlimited interview practice sessions</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>AI-powered personalized feedback</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Voice interaction and analysis</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Performance analytics dashboard</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>All interview types covered</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Mobile app for iOS & Android</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-check">✅</span>
+                            <span>Future updates included</span>
+                        </div>
+                    </div>
+                    
+                    <button id="pricing-cta" class="cta-button-large">
+                        <span class="cta-text">Pre-Order Now - Save $30</span>
+                        <span class="cta-subtext">Secure your early bird pricing</span>
+                    </button>
+                    
+                    <div class="price-guarantees">
+                        <div class="guarantee-item">
+                            <span class="guarantee-icon">🚀</span>
+                            <span>App launches in 30 days</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <span class="guarantee-icon">💯</span>
+                            <span>30-day money-back guarantee</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <span class="guarantee-icon">🔒</span>
+                            <span>Secure payment with Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pricing-comparison">
+                    <h3>Compare with alternatives:</h3>
+                    <div class="comparison-item">
+                        <span class="comparison-service">Professional coach:</span>
+                        <span class="comparison-price">$150+/session</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-service">Interview bootcamp:</span>
+                        <span class="comparison-price">$500-2000</span>
+                    </div>
+                    <div class="comparison-item highlighted">
+                        <span class="comparison-service">InterviewReady AI:</span>
+                        <span class="comparison-price">$29 (lifetime)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>When will the app be available?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>InterviewReady AI will launch in 30 days. Pre-order customers will get immediate access as soon as it's available, plus a bonus onboarding session.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I'm not satisfied with the app?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day money-back guarantee. If you're not completely satisfied, we'll refund your purchase, no questions asked.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Which platforms will be supported?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>InterviewReady AI will be available on iOS, Android, and web. Your purchase includes access to all platforms.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How does the AI personalization work?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI analyzes your responses, identifies patterns in your communication style, and adapts questions based on your target role and experience level. The more you practice, the more personalized it becomes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this a subscription service?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No! The $29 pre-order is a one-time payment for lifetime access to InterviewReady AI, including all future updates and features.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section">
+            <div class="final-cta-content">
+                <h2 class="final-cta-title">Ready to Ace Your Next Interview?</h2>
+                <p class="final-cta-subtitle">
+                    Join 500+ professionals who are already preparing for success with AI-powered interview coaching.
+                </p>
+                
+                <div class="urgency-indicators">
+                    <div class="urgency-item">
+                        <span class="urgency-icon">⏰</span>
+                        <span>Early bird pricing ends soon</span>
+                    </div>
+                    <div class="urgency-item">
+                        <span class="urgency-icon">👥</span>
+                        <span>Limited to first 100 customers</span>
+                    </div>
+                    <div class="urgency-item">
+                        <span class="urgency-icon">🚀</span>
+                        <span>App launches in 30 days</span>
+                    </div>
+                </div>
+                
+                <button id="final-cta" class="cta-button-xl">
+                    <span class="cta-main-text">Secure Your Spot - Pre-Order Now</span>
+                    <span class="cta-sub-text">$29 (Save $30) • Lifetime Access • 30-Day Guarantee</span>
+                </button>
+                
+                <div class="payment-security">
+                    <span class="security-text">Secured by</span>
+                    <div class="stripe-badge">Stripe</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🚀</span>
+                        <span class="logo-text">InterviewReady AI</span>
+                    </div>
+                    <p class="footer-description">
+                        AI-powered interview coaching that gets you hired.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@interviewready.ai">Contact</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/terms">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 InterviewReady AI. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

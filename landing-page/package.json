@@ -1,0 +1,24 @@
+{
+  "name": "interviewready-landing-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for InterviewReady AI Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "stripe": "^14.12.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "InterviewReady AI Team",
+  "license": "MIT"
+}
