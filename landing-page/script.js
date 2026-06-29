@@ -248,6 +248,54 @@ if (!document.querySelector('#spinner-styles')) {
     document.head.appendChild(style);
 }
 
+// Attach event listeners to all CTA buttons when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Hero CTA button
+    const heroCta = document.getElementById('hero-cta');
+    if (heroCta) {
+        heroCta.addEventListener('click', function(e) {
+            e.preventDefault();
+            handlePreOrder(this);
+        });
+    }
+    
+    // Nav CTA button
+    const navCta = document.getElementById('nav-cta');
+    if (navCta) {
+        navCta.addEventListener('click', function(e) {
+            e.preventDefault();
+            handlePreOrder(this);
+        });
+    }
+    
+    // Pricing CTA button
+    const pricingCta = document.getElementById('pricing-cta');
+    if (pricingCta) {
+        pricingCta.addEventListener('click', function(e) {
+            e.preventDefault();
+            handlePreOrder(this);
+        });
+    }
+    
+    // Final CTA button
+    const finalCta = document.getElementById('final-cta');
+    if (finalCta) {
+        finalCta.addEventListener('click', function(e) {
+            e.preventDefault();
+            handlePreOrder(this);
+        });
+    }
+    
+    // Also handle buttons with class 'cta-button'
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            handlePreOrder(this);
+        });
+    });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
