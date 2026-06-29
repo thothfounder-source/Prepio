@@ -20,7 +20,7 @@ function trackEvent(eventName, properties = {}) {
     }
 }
 
-// Handle pre-order button click
+// Handle pre-order button click - Direct to Stripe Checkout
 async function handlePreOrder(button) {
     // Show loading state
     const originalText = button.innerHTML;
@@ -33,31 +33,24 @@ async function handlePreOrder(button) {
         // Track the pre-order attempt
         trackEvent('preorder_initiated');
         
-        // Create checkout session
-        const response = await fetch('/api/create-checkout-session', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                priceId: priceId,
+        // Direct Stripe Checkout without backend
+        const { error } = await stripe.redirectToCheckout({
+            lineItems: [{
+                price: priceId,
                 quantity: 1
-            })
+            }],
+            mode: 'payment',
+            successUrl: window.location.origin + '/success.html',
+            cancelUrl: window.location.origin,
+            customerEmail: '', // Optional: pre-fill email
+            billingAddressCollection: 'auto',
+            shippingAddressCollection: 'required' // Set to 'required' or 'auto' as needed
         });
         
-        const session = await response.json();
-        
-        if (response.ok) {
-            // Redirect to Stripe Checkout
-            trackEvent('checkout_redirect');
-            const result = await stripe.redirectToCheckout({ sessionId: session.id });
-            
-            if (result.error) {
-                throw result.error;
-            }
-        } else {
-            throw new Error(session.error || 'Unable to create payment session');
+        if (error) {
+            throw error;
         }
+        
     } catch (error) {
         console.error('Pre-order error:', error);
         trackEvent('preorder_error', { error: error.message });
@@ -250,47 +243,67 @@ if (!document.querySelector('#spinner-styles')) {
 
 // Attach event listeners to all CTA buttons when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, attaching event listeners');
+    
     // Hero CTA button
     const heroCta = document.getElementById('hero-cta');
     if (heroCta) {
+        console.log('Found hero CTA button');
         heroCta.addEventListener('click', function(e) {
             e.preventDefault();
+            console.log('Hero CTA clicked');
             handlePreOrder(this);
         });
+    } else {
+        console.log('Hero CTA button not found');
     }
     
     // Nav CTA button
     const navCta = document.getElementById('nav-cta');
     if (navCta) {
+        console.log('Found nav CTA button');
         navCta.addEventListener('click', function(e) {
             e.preventDefault();
+            console.log('Nav CTA clicked');
             handlePreOrder(this);
         });
+    } else {
+        console.log('Nav CTA button not found');
     }
     
     // Pricing CTA button
     const pricingCta = document.getElementById('pricing-cta');
     if (pricingCta) {
+        console.log('Found pricing CTA button');
         pricingCta.addEventListener('click', function(e) {
             e.preventDefault();
+            console.log('Pricing CTA clicked');
             handlePreOrder(this);
         });
+    } else {
+        console.log('Pricing CTA button not found');
     }
     
     // Final CTA button
     const finalCta = document.getElementById('final-cta');
     if (finalCta) {
+        console.log('Found final CTA button');
         finalCta.addEventListener('click', function(e) {
             e.preventDefault();
+            console.log('Final CTA clicked');
             handlePreOrder(this);
         });
+    } else {
+        console.log('Final CTA button not found');
     }
     
     // Also handle buttons with class 'cta-button'
     const ctaButtons = document.querySelectorAll('.cta-button');
-    ctaButtons.forEach(button => {
+    console.log(`Found ${ctaButtons.length} CTA buttons by class`);
+    ctaButtons.forEach((button, index) => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
+            console.log(`CTA button ${index} clicked`);
             handlePreOrder(this);
         });
     });
