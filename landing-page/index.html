@@ -4,87 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prepio - Ace Your Next Interview</title>
-    <meta name="description" content="AI-powered interview practice that gets you hired. Personalized coaching, real voice interaction, and performance analytics. Join 500+ professionals preparing for success.">
-    <meta property="og:title" content="Prepio - Ace Your Next Interview">
-    <meta property="og:description" content="AI-powered interview practice that gets you hired. 50% off early bird special - only $29!">
-    <meta property="og:url" content="https://prepio.io">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://js.stripe.com/v3/"></script>
-
-    <meta name="stripe-key" content="pk_test_placeholder">
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="header-inner">
-            <a href="/" class="logo">
-                <span class="logo-text">Prepio</span>
-            </a>
-            <nav class="nav">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <button id="nav-cta" class="btn btn-primary btn-sm">Pre-Order Now</button>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="#" class="logo">Prepio</a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="https://buy.stripe.com/5kA6p02zF2lKb8u3cc" class="nav-cta" target="_blank">
+                        Pre-Order Now
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">
-                            Ace Your Next Interview with <span class="text-purple">AI-Powered Practice</span>
-                        </h1>
-                        <p class="hero-subtitle">
-                            Get personalized coaching, practice with realistic scenarios, and build confidence
-                            that gets you hired. Join 500+ professionals already preparing for success.
-                        </p>
-                        <div class="hero-actions">
-                            <button id="hero-cta" class="btn btn-primary btn-lg">
-                                <span class="cta-text">Get Early Access</span>
-                                <span class="cta-price">$29 <span class="original-price">$59</span></span>
-                            </button>
-                            <a href="#features" class="btn btn-ghost btn-lg">See how it works</a>
+            <div class="hero-content">
+                <h1>Ace Your Next Interview with AI-Powered Practice</h1>
+                <p>Get personalized coaching, practice with realistic scenarios, and build confidence that gets you hired. Join 500+ professionals already preparing for success.</p>
+                <div class="hero-cta">
+                    <a href="https://buy.stripe.com/5kA6p02zF2lKb8u3cc" class="cta-button" target="_blank">
+                        Get Early Access
+                        <span class="price">$29 <span class="strikethrough">$59</span></span>
+                    </a>
+                    <a href="#features" class="secondary-cta">See how it works</a>
+                </div>
+                <div class="trust-badges">
+                    <span>🚀 Launches in 30 days</span>
+                    <span>💰 30-day money-back guarantee</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-header">Interview Practice</div>
+                    <div class="chat-content">
+                        <div class="bot-message">
+                            <span class="bot-avatar">🤖</span>
+                            <div class="message-content">
+                                "Tell me about a time when you had to work with a difficult team member..."
+                            </div>
                         </div>
-                        <div class="hero-meta">
-                            <span>Launches in 30 days</span>
-                            <span class="meta-sep">·</span>
-                            <span>30-day money-back guarantee</span>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="app-mockup">
-                            <div class="phone-frame">
-                                <div class="phone-screen">
-                                    <div class="app-interface">
-                                        <div class="app-header">
-                                            <div class="status-bar"></div>
-                                            <h3>Interview Practice</h3>
-                                        </div>
-                                        <div class="practice-card">
-                                            <div class="ai-avatar">🤖</div>
-                                            <div class="message-bubble">
-                                                "Tell me about a time when you had to work with a difficult team member..."
-                                            </div>
-                                        </div>
-                                        <div class="controls">
-                                            <div class="record-btn">🎙️</div>
-                                            <div class="progress-bar">
-                                                <div class="progress-fill"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="user-message">
+                            <span class="user-avatar">🎙️</span>
+                            <div class="message-content">
+                                [Your response here]
                             </div>
                         </div>
                     </div>
@@ -92,155 +65,104 @@
             </div>
         </section>
 
-        <!-- Social Proof Bar -->
-        <section class="social-proof">
-            <div class="container">
-                <div class="proof-stats">
-                    <div class="stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Active Users</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number">92%</span>
-                        <span class="stat-label">Success Rate</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number">4.8 ⭐</span>
-                        <span class="stat-label">User Rating</span>
-                    </div>
-                </div>
+        <section class="stats">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">ACTIVE USERS</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">92%</span>
+                <span class="stat-label">SUCCESS RATE</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.8 ⭐</span>
+                <span class="stat-label">USER RATING</span>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section id="features" class="section features-section">
+        <section id="features" class="features">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Everything you need to succeed</h2>
-                    <p class="section-subtitle">
-                        AI-powered interview coaching tailored to your specific role and experience level
-                    </p>
-                </div>
+                <h2>Everything you need to succeed</h2>
+                <p>AI-powered interview coaching tailored to your specific role and experience level</p>
+                
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
-                        </div>
-                        <h3 class="feature-title">Personalized Practice</h3>
-                        <p class="feature-description">
-                            AI adapts questions to your target role, experience level, and identified weak points.
-                            Get relevant practice that matches real interview scenarios.
-                        </p>
+                        <div class="feature-icon">🎯</div>
+                        <h3>Personalized Practice</h3>
+                        <p>AI adapts questions to your target role, experience level, and identified weak points. Get relevant practice that matches real interview scenarios.</p>
                     </div>
+                    
                     <div class="feature-card">
-                        <div class="feature-icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-                        </div>
-                        <h3 class="feature-title">Real Voice Interaction</h3>
-                        <p class="feature-description">
-                            Practice speaking out loud with natural voice conversations.
-                            Get instant feedback on your delivery, pace, and confidence level.
-                        </p>
+                        <div class="feature-icon">🎙️</div>
+                        <h3>Real Voice Interaction</h3>
+                        <p>Practice speaking out loud with natural voice conversations. Get instant feedback on your delivery, pace, and confidence level.</p>
                     </div>
+                    
                     <div class="feature-card">
-                        <div class="feature-icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                        </div>
-                        <h3 class="feature-title">Performance Analytics</h3>
-                        <p class="feature-description">
-                            Track your improvement over time with detailed analytics.
-                            Identify patterns, strengths, and areas for focused practice.
-                        </p>
+                        <div class="feature-icon">📊</div>
+                        <h3>Performance Analytics</h3>
+                        <p>Track your improvement over time with detailed analytics. Identify patterns, strengths, and areas for focused practice.</p>
                     </div>
+                    
                     <div class="feature-card">
-                        <div class="feature-icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                        </div>
-                        <h3 class="feature-title">Multiple Interview Types</h3>
-                        <p class="feature-description">
-                            Practice behavioral, technical, case study, and role-specific interviews.
-                            Comprehensive preparation for any interview format.
-                        </p>
+                        <div class="feature-icon">🔄</div>
+                        <h3>Multiple Interview Types</h3>
+                        <p>Practice behavioral, technical, case study, and role-specific interviews. Comprehensive preparation for any interview format.</p>
                     </div>
+                    
                     <div class="feature-card">
-                        <div class="feature-icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.547-.547z"/></svg>
-                        </div>
-                        <h3 class="feature-title">AI-Powered Insights</h3>
-                        <p class="feature-description">
-                            Advanced AI analyzes your responses and provides actionable feedback.
-                            Learn what interviewers are really looking for.
-                        </p>
+                        <div class="feature-icon">🧠</div>
+                        <h3>AI-Powered Insights</h3>
+                        <p>Advanced AI analyzes your responses and provides actionable feedback. Learn what interviewers are really looking for.</p>
                     </div>
+                    
                     <div class="feature-card">
-                        <div class="feature-icon-wrap">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#533afd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                        </div>
-                        <h3 class="feature-title">Mobile First Design</h3>
-                        <p class="feature-description">
-                            Practice anywhere, anytime with our native mobile app.
-                            Seamless experience across all your devices.
-                        </p>
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile First Design</h3>
+                        <p>Practice anywhere, anytime with our native mobile app. Seamless experience across all your devices.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="section testimonials-section">
+        <section class="testimonials">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Success stories</h2>
-                    <p class="section-subtitle">Real results from real users</p>
-                </div>
+                <h2>Success stories</h2>
+                <p>Real results from real users</p>
+                
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars">★★★★★</div>
-                            <p class="testimonial-text">
-                                "Prepio helped me land my dream job at Google. The personalized
-                                feedback was incredible — it's like having a professional coach in your pocket."
-                            </p>
-                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>"Prepio helped me land my dream job at Google. The personalized feedback was incredible — it's like having a professional coach in your pocket."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">SC</div>
+                            <span class="author-initials">SC</span>
                             <div class="author-info">
-                                <span class="author-name">Sarah Chen</span>
-                                <span class="author-role">Software Engineer at Google</span>
+                                <div class="author-name">Sarah Chen</div>
+                                <div class="author-title">Software Engineer at Google</div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars">★★★★★</div>
-                            <p class="testimonial-text">
-                                "The voice practice feature was a game-changer. I went from stumbling over
-                                answers to confidently articulating my thoughts. Increased my offer rate by 300%!"
-                            </p>
-                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>"The voice practice feature was a game-changer. I went from stumbling over answers to confidently articulating my thoughts. Increased my offer rate by 300%!"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">MJ</div>
+                            <span class="author-initials">MJ</span>
                             <div class="author-info">
-                                <span class="author-name">Marcus Johnson</span>
-                                <span class="author-role">Product Manager at Microsoft</span>
+                                <div class="author-name">Marcus Johnson</div>
+                                <div class="author-title">Product Manager at Microsoft</div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars">★★★★★</div>
-                            <p class="testimonial-text">
-                                "As a career changer, I was nervous about interviews. Prepio gave me
-                                the confidence and skills I needed. Worth every penny!"
-                            </p>
-                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>"As a career changer, I was nervous about interviews. Prepio gave me the confidence and skills I needed. Worth every penny!"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">ER</div>
+                            <span class="author-initials">ER</span>
                             <div class="author-info">
-                                <span class="author-name">Emily Rodriguez</span>
-                                <span class="author-role">Data Scientist at Netflix</span>
+                                <div class="author-name">Emily Rodriguez</div>
+                                <div class="author-title">Data Scientist at Netflix</div>
                             </div>
                         </div>
                     </div>
@@ -248,211 +170,156 @@
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section id="pricing" class="section pricing-section">
+        <section id="pricing" class="pricing">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Special Launch Offer</h2>
-                    <p class="section-subtitle">
-                        Lock in lifetime access for a one-time payment during our pre-order phase.
-                        After launch, Prepio will switch to a $9.99/month subscription model.
-                    </p>
-                </div>
-                <div class="pricing-container">
-                    <div class="price-card featured">
-                        <div class="price-badge">Early Bird — 50% Off</div>
-                        <div class="price-header">
-                            <div class="price-amount">
-                                <span class="current-price">$29</span>
-                                <span class="original-price">$59</span>
-                            </div>
-                            <div class="price-period">One-time payment</div>
-                            <div class="price-description">One-time payment for lifetime access</div>
+                <h2>Special Launch Offer</h2>
+                <p>Lock in lifetime access for a one-time payment during our pre-order phase. After launch, Prepio will switch to a $9.99/month subscription model.</p>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <span class="badge">Early Bird — 50% Off</span>
+                        <div class="price">
+                            <span class="current-price">$29</span>
+                            <span class="original-price">$59</span>
                         </div>
-                        <div class="price-features">
-                            <div class="feature-item">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.25 4.75L6 12 2.75 8.75" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span>Unlimited interview practice sessions</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.25 4.75L6 12 2.75 8.75" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span>AI-powered personalized feedback</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.25 4.75L6 12 2.75 8.75" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span>Voice interaction and analysis</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.25 4.75L6 12 2.75 8.75" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span>Performance analytics dashboard</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.25 4.75L6 12 2.75 8.75" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span>All interview types covered</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.25 4.75L6 12 2.75 8.75" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span>Mobile app for iOS &amp; Android</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.25 4.75L6 12 2.75 8.75" stroke="#15be53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span>Future updates included</span>
-                            </div>
-                        </div>
-                        <button id="pricing-cta" class="btn btn-primary btn-lg btn-block">
-                            <span class="cta-text">Get Early Access</span>
-                        </button>
-                        <div class="price-guarantees">
-                            <span>Launches in 30 days</span>
-                            <span class="meta-sep">·</span>
-                            <span>30-day money-back guarantee</span>
-                            <span class="meta-sep">·</span>
-                            <span>Secure payment via Stripe</span>
-                        </div>
+                        <p class="price-description">One-time payment for lifetime access</p>
                     </div>
-
+                    
+                    <ul class="features-list">
+                        <li>✓ Unlimited interview practice sessions</li>
+                        <li>✓ AI-powered personalized feedback</li>
+                        <li>✓ Voice interaction and analysis</li>
+                        <li>✓ Performance analytics dashboard</li>
+                        <li>✓ All interview types covered</li>
+                        <li>✓ Mobile app for iOS & Android</li>
+                        <li>✓ Future updates included</li>
+                    </ul>
+                    
+                    <a href="https://buy.stripe.com/5kA6p02zF2lKb8u3cc" class="cta-button" target="_blank" id="pricing-cta">
+                        Get Early Access
+                    </a>
+                    
                     <div class="pricing-comparison">
-                        <h3>Compare with alternatives</h3>
-                        <table class="comparison-table">
-                            <tbody>
-                                <tr>
-                                    <td class="comparison-service">Professional coach</td>
-                                    <td class="comparison-price">$150+/session</td>
-                                </tr>
-                                <tr>
-                                    <td class="comparison-service">Interview bootcamp</td>
-                                    <td class="comparison-price">$500–2,000</td>
-                                </tr>
-                                <tr class="highlighted">
-                                    <td class="comparison-service">Prepio</td>
-                                    <td class="comparison-price">$29 (lifetime)</td>
-                                </tr>
-                            </tbody>
+                        <table>
+                            <tr>
+                                <th>Professional coach</th>
+                                <td>$150+/session</td>
+                            </tr>
+                            <tr>
+                                <th>Interview bootcamp</th>
+                                <td>$500–2,000</td>
+                            </tr>
+                            <tr class="highlight">
+                                <th>Prepio</th>
+                                <td>$29 (lifetime)</td>
+                            </tr>
                         </table>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section id="faq" class="section faq-section">
+        <section id="faq" class="faq">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Frequently asked questions</h2>
-                </div>
-                <div class="faq-container">
+                <h2>Frequently asked questions</h2>
+                
+                <div class="faq-list">
                     <div class="faq-item">
-                        <div class="faq-question" tabindex="0">
+                        <div class="faq-question">
                             <span>When will the app be available?</span>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Prepio will launch in 30 days. Pre-order customers will get immediate access as soon as it's available, plus a bonus onboarding session.</p>
+                            <p>We're launching in 30 days! Pre-order customers get early access before the public launch and lifetime access at a special discount.</p>
                         </div>
                     </div>
+                    
                     <div class="faq-item">
-                        <div class="faq-question" tabindex="0">
-                            <span>What if I'm not satisfied with the app?</span>
+                        <div class="faq-question">
+                            <span>What happens after I pre-order?</span>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>We offer a 30-day money-back guarantee. If you're not completely satisfied, we'll refund your purchase, no questions asked.</p>
+                            <p>You'll receive immediate access to our beta version and get early access to the full app when it launches. You'll also get all future updates for free.</p>
                         </div>
                     </div>
+                    
                     <div class="faq-item">
-                        <div class="faq-question" tabindex="0">
-                            <span>Which platforms will be supported?</span>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Prepio will be available on iOS, Android, and web. Your purchase includes access to all platforms.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" tabindex="0">
-                            <span>How does the AI personalization work?</span>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Our AI analyzes your responses, identifies patterns in your communication style, and adapts questions based on your target role and experience level. The more you practice, the more personalized it becomes.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" tabindex="0">
+                        <div class="faq-question">
                             <span>Is this a subscription service?</span>
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>No! The $29 pre-order is a one-time payment for lifetime access to Prepio, including all future updates and features. After our launch period, new customers will subscribe at $9.99/month, but all pre-order customers keep lifetime access at no additional cost.</p>
+                            <p>For early bird customers, it's a one-time payment for lifetime access. After launch, new customers will pay $9.99/month, but you'll never be charged again.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What if I'm not satisfied?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day money-back guarantee. If you're not completely satisfied with Prepio, we'll refund your purchase in full.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What devices are supported?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Prepio works on iOS and Android devices, plus you can access the web version from any computer. Your progress syncs across all devices.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA Section -->
-        <section class="final-cta-section">
+        <section class="final-cta">
             <div class="container">
-                <div class="final-cta-content">
-                    <h2 class="final-cta-title">Ready to ace your next interview?</h2>
-                    <p class="final-cta-subtitle">
-                        Join 500+ professionals who are already preparing for success with AI-powered interview coaching.
-                    </p>
-                    <div class="urgency-indicators">
-                        <div class="urgency-item">
-                            <span>Early bird pricing ends soon</span>
-                        </div>
-                        <div class="urgency-item">
-                            <span>Limited to first 100 customers</span>
-                        </div>
-                        <div class="urgency-item">
-                            <span>App launches in 30 days</span>
-                        </div>
-                    </div>
-                    <button id="final-cta" class="btn btn-white btn-xl">
-                        <span class="cta-main-text">Secure Your Spot — Pre-Order Now</span>
-                        <span class="cta-sub-text">$29 (Save $30) · Lifetime Access · 30-Day Guarantee</span>
-                    </button>
-                    <div class="payment-security">
-                        <span class="security-text">Secured by</span>
-                        <span class="stripe-badge">Stripe</span>
-                    </div>
-                </div>
+                <h2>Ready to ace your next interview?</h2>
+                <a href="https://buy.stripe.com/5kA6p02zF2lKb8u3cc" class="cta-button" target="_blank" id="final-cta">
+                    Secure Your Spot — Pre-Order Now
+                    <span class="price-detail">$29 (Save $30) · Lifetime Access · 30-Day Guarantee</span>
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section footer-brand">
-                    <a href="/" class="logo">
-                        <span class="logo-text">Prepio</span>
-                    </a>
-                    <p class="footer-description">
-                        AI-powered interview coaching that gets you hired.
-                    </p>
+                <div class="footer-brand">
+                    <a href="#" class="logo">Prepio</a>
+                    <p>AI-powered interview coaching that gets you hired.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@prepio.io">Contact</a></li>
-                        <li><a href="/privacy">Privacy</a></li>
-                        <li><a href="/terms">Terms</a></li>
-                    </ul>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>PRODUCT</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>SUPPORT</h4>
+                        <ul>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                            <li><a href="#terms">Terms</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Prepio. All rights reserved.</p>
+                <p>Secured by Stripe</p>
             </div>
         </div>
     </footer>
