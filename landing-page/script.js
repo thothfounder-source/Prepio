@@ -242,73 +242,8 @@ if (!document.querySelector('#spinner-styles')) {
     document.head.appendChild(style);
 }
 
-// Attach event listeners to all CTA buttons when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, attaching event listeners');
-    
-    // Hero CTA button
-    const heroCta = document.getElementById('hero-cta');
-    if (heroCta) {
-        console.log('Found hero CTA button');
-        heroCta.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Hero CTA clicked');
-            handlePreOrder(this);
-        });
-    } else {
-        console.log('Hero CTA button not found');
-    }
-    
-    // Nav CTA button
-    const navCta = document.getElementById('nav-cta');
-    if (navCta) {
-        console.log('Found nav CTA button');
-        navCta.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Nav CTA clicked');
-            handlePreOrder(this);
-        });
-    } else {
-        console.log('Nav CTA button not found');
-    }
-    
-    // Pricing CTA button
-    const pricingCta = document.getElementById('pricing-cta');
-    if (pricingCta) {
-        console.log('Found pricing CTA button');
-        pricingCta.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Pricing CTA clicked');
-            handlePreOrder(this);
-        });
-    } else {
-        console.log('Pricing CTA button not found');
-    }
-    
-    // Final CTA button
-    const finalCta = document.getElementById('final-cta');
-    if (finalCta) {
-        console.log('Found final CTA button');
-        finalCta.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Final CTA clicked');
-            handlePreOrder(this);
-        });
-    } else {
-        console.log('Final CTA button not found');
-    }
-    
-    // Also handle buttons with class 'cta-button'
-    const ctaButtons = document.querySelectorAll('.cta-button');
-    console.log(`Found ${ctaButtons.length} CTA buttons by class`);
-    ctaButtons.forEach((button, index) => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log(`CTA button ${index} clicked`);
-            handlePreOrder(this);
-        });
-    });
-});
+// CTA buttons are now plain links pointing directly to the Stripe checkout.
+// No JavaScript click handling needed — native link navigation handles it.
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
