@@ -42,9 +42,10 @@ async function handlePreOrder(button) {
             mode: 'payment',
             successUrl: window.location.origin + '/success.html',
             cancelUrl: window.location.origin,
-            customerEmail: '', // Optional: pre-fill email
             billingAddressCollection: 'auto',
-            shippingAddressCollection: 'required' // Set to 'required' or 'auto' as needed
+            shippingAddressCollection: {
+                allowedCountries: ['US', 'CA', 'GB', 'AU', 'DE', 'FR', 'ES', 'IT', 'NL', 'SE', 'NO', 'DK', 'FI', 'IE', 'NZ', 'SG', 'JP', 'KR', 'HK', 'TW']
+            }
         });
         
         if (error) {
